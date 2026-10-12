@@ -28,7 +28,6 @@ pipeline {
             agent any
             steps {
                 sh '''
-                    docker rm -f node-app || true
                     docker run -d \
                         --name node-app \
                         -p 8081:8080 \
